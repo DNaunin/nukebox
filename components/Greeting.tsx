@@ -6,7 +6,7 @@ type Props = {
 
 export default function Greeting(props: Props) {
   return (
-    <p>
+    <p className={styles.greeting}>
       Hello, <span className={styles.name}>{props.name}</span>
     </p>
   );
