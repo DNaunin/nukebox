@@ -1,5 +1,11 @@
+.greeting {
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
 .name {
   font-weight: bolder;
   display: block;
   font-size: 1.2em;
+  margin-top: 10px;
 }
