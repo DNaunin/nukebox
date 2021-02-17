@@ -2,14 +2,14 @@
   margin-top: 0;
   margin-left: 20px;
   display: grid;
-  grid-template-columns: 11% 89%;
+  grid-template-columns: 8% 92%;
   grid-template-rows: 25% 75%;
   grid-gap: 5px;
 }
 
 .song__image {
-  width: 5rem;
-  height: 5rem;
+  width: 5em;
+  height: 5em;
   object-fit: cover;
   border-radius: 15px;
 }
@@ -23,4 +23,6 @@
 .song__artist {
   font-size: 9pt;
   grid-area: 2 / 2;
+  margin-bottom: 0;
+  color: var(--secondary-font-color);
 }
