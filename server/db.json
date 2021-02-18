@@ -1,16 +1,58 @@
 {
   "tracks": [
     {
-      "id": "scooter_paul-is-dead",
-      "imgSrc": "https://images.unsplash.com/photo-1613473060226-dd81153a63db?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-      "title": "Paul is Dead",
-      "artist": "Scooter"
-    },
-    {
       "id": "metallica_the-unforgiven",
-      "imgSrc": "https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "image": "https://images.unsplash.com/photo-1509322990637-85444ed8518f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mjd8fG1ldGFsfGVufDB8fDB8&auto=format&fit=crop&w=500&q=60",
       "title": "The Unforgiven",
       "artist": "Metallica"
+    },
+    {
+      "id": "flogging-molly_drunken-lullabies",
+      "image": "https://images.unsplash.com/photo-1522590018573-8f925fe0acf1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=890&q=80",
+      "title": "Drunken Lullabies",
+      "artist": "Flogging Molly"
+    },
+    {
+      "id": "descendents_coffee-mug",
+      "title": "Coffee Mug",
+      "artist": "Descendents",
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvZmZlZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "journey_dont-stop-believing",
+      "title": "Don't Stop Believing",
+      "artist": "Journey",
+      "image": "https://images.unsplash.com/photo-1612512836264-5e58fab88bf0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8dWZvfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "iggy-pop_the-passenger",
+      "title": "The Passenger",
+      "artist": "Iggy Pop",
+      "image": "https://images.unsplash.com/photo-1498543963509-a9c181fed309?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8cGFzc2VuZ2VyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "elton-john_im-still-standing",
+      "title": "I'm Still Standing",
+      "artist": "Elton John",
+      "image": "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8cm9ja2V0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "rupert-holmes_escape",
+      "title": "Escape (The Pina Colada Song)",
+      "artist": "Rupert Holmes",
+      "image": "https://images.unsplash.com/photo-1607446045710-d5a8fd9bc1db?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHBpbmElMjBjb2xhZGF8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "metallica_die-die-die-my-darling",
+      "title": "Pie, Pie, Pie, My Darling",
+      "artist": "Metallica",
+      "image": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cGllfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": "rick-astley_never-gonna-give-you-up",
+      "title": "Never Gonna Give Pie Up",
+      "artist": "Rick Astley",
+      "image": "https://images.unsplash.com/photo-1567460074231-1e038921a459?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzF8fHBpZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
     }
   ]
 }
