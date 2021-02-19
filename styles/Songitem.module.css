@@ -23,6 +23,10 @@
   align-self: end;
 }
 
+.song__title:hover {
+  color: orange;
+}
+
 .song__artist {
   grid-area: artist;
   align-self: start;

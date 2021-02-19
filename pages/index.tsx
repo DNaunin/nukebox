@@ -4,24 +4,23 @@ import styles from "../styles/Home.module.css";
 import Greeting from "../components/Greeting";
 import SongItem from "../components/SongItem";
 import { APISong, getSongs } from "../utils/api";
+import Link from "next/link";
 
 export default function Home() {
   const [songs, setSongs] = useState<APISong[]>([]);
 
   useEffect(() => {
-    console.log("Homepage is mounted now");
     getSongs().then((newSongs) => {
       setSongs(newSongs);
     });
-  });
+  }, []);
 
   const songItems = songs.map((song) => (
-    <SongItem
-      key={`${song.artist}-${song.title}`}
-      image={song.image}
-      artist={song.artist}
-      title={song.title}
-    />
+    <Link href={`/songs/${song.id}`} key={song.id}>
+      <a>
+        <SongItem image={song.image} artist={song.artist} title={song.title} />
+      </a>
+    </Link>
   ));
   return (
     <div className={styles.container}>
