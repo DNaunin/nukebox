@@ -5,7 +5,6 @@ import styles from "../../styles/Player.module.css";
 import SongDetails from "../../components/SongDetails";
 import AudioPlayer from "../../components/AudioPlayer";
 import Navigation from "../../components/Navigation";
-import AudioControls from "../../components/AudioControls";
 
 export default function Song() {
   const router = useRouter();
@@ -42,12 +41,6 @@ export default function Song() {
       </main>
       <footer>
         <AudioPlayer audio={song.audio} />
-        {/* <AudioControls
-          isPlaying={isPlaying}
-          onPrevClick={toPrevTrack}
-          onNextClick={toNextTrack}
-          onPlayPauseClick={setIsPlaying}
-        /> */}
       </footer>
     </div>
   );
