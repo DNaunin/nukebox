@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import { APISong, getSong } from "../../utils/api";
 import styles from "../../styles/Player.module.css";
 import SongDetails from "../../components/SongDetails";
-import Audioplayer from "../../components/AudioPlayer";
+import AudioPlayer from "../../components/AudioPlayer";
+import Navigation from "../../components/Navigation";
+import AudioControls from "../../components/AudioControls";
 
 export default function Song() {
   const router = useRouter();
@@ -27,8 +29,9 @@ export default function Song() {
   return (
     <div className={styles.player}>
       <div>
-        {/* <header><Navigation /></header> */}
-        Now Playing
+        <header>
+          <Navigation />
+        </header>
       </div>
       <main>
         <SongDetails
@@ -38,7 +41,13 @@ export default function Song() {
         />
       </main>
       <footer>
-        <Audioplayer audio={song.audio} />
+        <AudioPlayer audio={song.audio} />
+        {/* <AudioControls
+          isPlaying={isPlaying}
+          onPrevClick={toPrevTrack}
+          onNextClick={toNextTrack}
+          onPlayPauseClick={setIsPlaying}
+        /> */}
       </footer>
     </div>
   );
