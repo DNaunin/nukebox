@@ -2,6 +2,7 @@
   --background-color: #1a2028;
   --primary-font-color: #fff;
   --secondary-font-color: #b8b8b8;
+  --playerbackground-color: #282a3d;
 }
 
 html,
@@ -21,4 +22,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: var(--playerbackground-color);
 }

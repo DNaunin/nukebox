@@ -1,0 +1,7 @@
+.player {
+  display: grid;
+  grid-template-columns: repeat(3);
+  grid-template-rows: repeat(9);
+  justify-items: center;
+  margin-top: 15px;
+}

@@ -1,0 +1,25 @@
+.audiofigure {
+  margin: 0;
+}
+
+.playercaption {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: center;
+}
+
+.heart {
+  grid-column-start: 2;
+  justify-self: center;
+}
+
+.volume {
+  grid-column-start: 3;
+  justify-self: center;
+}
+
+.download {
+  grid-column-start: 1;
+  justify-self: center;
+}

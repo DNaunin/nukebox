@@ -1,0 +1,14 @@
+.navigation {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-gap: 35px;
+}
+
+.button__navigation {
+  background-color: var(--background-color);
+  border: none;
+}
+
+.navtitle {
+  justify-self: center;
+}

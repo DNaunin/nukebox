@@ -1,0 +1,16 @@
+.SongDetails {
+  display: grid;
+  justify-items: center;
+  margin-top: 15px;
+}
+
+.image__player {
+  border-radius: 25px;
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.SongInfo {
+  margin-top: 15px;
+}
