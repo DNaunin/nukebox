@@ -24,3 +24,30 @@
   grid-column-start: 1;
   justify-self: center;
 }
+
+.audioPlayer {
+  background: var(--playerbackground-color);
+  padding: 15% 27%;
+  border-radius: 25px;
+  display: grid;
+  justify-items: center;
+  grid-gap: 1rem;
+}
+
+.duration {
+  width: 100%;
+}
+
+.btn {
+  background: none;
+}
+
+.btn_image {
+  fill: black;
+}
+
+.favbutton {
+  border-radius: 75px;
+  background: var(--primarybackground-color);
+  border: none;
+}
