@@ -1,10 +1,10 @@
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import { APISong, getSong } from "../../utils/api";
 import styles from "../../styles/Player.module.css";
 import SongDetails from "../../components/SongDetails";
 import AudioPlayer from "../../components/AudioPlayer";
 import Navigation from "../../components/Navigation";
+import { useState } from "react";
+import { APISong, getSong } from "../../utils/api";
+import { useRouter } from "next/router";
 
 export default function Song() {
   const router = useRouter();
@@ -12,14 +12,12 @@ export default function Song() {
 
   const [song, setSong] = useState<APISong>(null);
 
-  useEffect(() => {
-    if (typeof id !== "string") {
-      return;
-    }
-    getSong(id).then((newSong) => {
-      setSong(newSong);
-    });
-  }, [id]);
+  if (typeof id !== "string") {
+    return;
+  }
+  getSong(id).then((newSong) => {
+    setSong(newSong);
+  });
 
   if (!song) {
     return <div>Loading...</div>;
@@ -39,8 +37,9 @@ export default function Song() {
           artist={song.artist}
         />
       </main>
+
       <footer>
-        <AudioPlayer audio={song.audio} />
+        <AudioPlayer src={song.audio} id={song.id} />
       </footer>
     </div>
   );
