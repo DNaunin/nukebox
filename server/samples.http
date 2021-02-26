@@ -1,0 +1,25 @@
+### GET HTML of index page
+GET http://localhost:3000/
+
+### GET HTML of track page
+GET http://localhost:3000/songs/metallica_the-unforgiven
+
+### GET all the tracks
+GET http://localhost:3000/api/songs 
+
+### GET a single track
+GET http://localhost:3000/api/songs/metallica_the-unforgiven
+
+### DELETE a single track
+DELETE http://localhost:3000/api/songs/rupert-holmes_escape
+
+### POST a new track
+POST http://localhost:3000/api/songs 
+
+{
+    "id": "batman_nananana", 
+    "image": "https://images.unsplash.com/photo-1610568781018-995405522539?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+    "title": "Nananana", 
+    "artist": "Batman", 
+    "audio": "/TestSong.mp3"
+}

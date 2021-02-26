@@ -18,7 +18,12 @@ export default function Home() {
   const songItems = songs.map((song) => (
     <Link href={`/songs/${song.id}`} key={song.id}>
       <a>
-        <SongItem image={song.image} artist={song.artist} title={song.title} />
+        <SongItem
+          image={song.image}
+          artist={song.artist}
+          title={song.title}
+          id={song.id}
+        />
       </a>
     </Link>
   ));

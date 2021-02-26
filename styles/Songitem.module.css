@@ -32,3 +32,8 @@
   align-self: start;
   color: var(--secondary-font-color);
 }
+
+.delete {
+  height: 2em;
+  background-color: var(--background-color);
+}

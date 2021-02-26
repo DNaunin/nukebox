@@ -1,0 +1,6 @@
+.newform {
+  display: grid;
+  text-align: right;
+  margin-right: 5em;
+  grid-gap: 1em;
+}
