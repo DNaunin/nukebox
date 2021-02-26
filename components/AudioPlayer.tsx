@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "../styles/Audioplayer.module.css";
 import useLocalStorage from "../hooks/useLocalStorage";
+import { deleteSong } from "../utils/api";
+import { Router, useRouter } from "next/router";
 
 type Props = {
   id: string;
@@ -12,18 +14,14 @@ export default function AudioPlayer({ src, id }: Props) {
   const intervalRef = useRef<NodeJS.Timeout>();
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
-
+  const router = useRouter();
   const audioElement = audioRef.current;
 
-  // const [favorite, setFavorite] = useState(null);
   const [favoriteSongs, setFavoriteSongs] = useLocalStorage<string[]>(
     "favoriteSongs",
     []
   );
   const favorite = favoriteSongs.includes(id);
-
-  // useEffect(() => {
-  //   if (typeof id != "string" || favorite === null) {
 
   const handleFavoriteClick = () => {
     if (favorite) {
@@ -35,9 +33,6 @@ export default function AudioPlayer({ src, id }: Props) {
       setFavoriteSongs([...favoriteSongs, id]);
     }
   };
-
-  //   return;
-  // }
 
   useEffect(() => {
     if (isPlaying) {
@@ -51,14 +46,21 @@ export default function AudioPlayer({ src, id }: Props) {
     }
   }, [isPlaying]);
 
+  const handleDeleteClick = async () => {
+    await deleteSong(id);
+    router.back();
+  };
+
   return (
     <figure className={styles.audiofigure}>
       <figcaption className={styles.playercaption}>
-        <img
-          src="/Download.svg"
-          className={styles.download}
-          alt="fake download button"
-        />
+        <button className={styles.btn} onClick={handleDeleteClick}>
+          <img
+            src="/trash.svg"
+            className={styles.download}
+            alt="fake download button"
+          />
+        </button>
         <button className={styles.favbutton} onClick={handleFavoriteClick}>
           {favorite ? <img src="/Heart.svg" /> : "🖤"}
         </button>
