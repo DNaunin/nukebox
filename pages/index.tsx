@@ -34,6 +34,9 @@ export default function Home() {
       </Head>
 
       <Greeting name="Dörte" />
+      <Link href={`/new`}>
+        <a className={styles.newsong}>➕</a>
+      </Link>
       <ul className={styles.songlist}>{songItems}</ul>
     </div>
   );

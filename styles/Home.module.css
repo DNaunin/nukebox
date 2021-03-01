@@ -8,3 +8,7 @@
   display: grid;
   row-gap: 1em;
 }
+
+.newsong {
+  margin-left: 20em;
+}

@@ -23,3 +23,24 @@ export async function deleteSong(id: string) {
   const response = await fetch(`/api/songs/${id}`, { method: "DELETE" });
   return response;
 }
+
+export async function createSong(newSong: APISong) {
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(newSong),
+  };
+  return fetch(`http://localhost:3000/api/songs`, requestOptions);
+}
+
+export async function editSong(changedSong: APISong) {
+  const requestOptions = {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(changedSong),
+  };
+  return fetch(
+    `http://localhost:3000/api/songs/${changedSong.id}`,
+    requestOptions
+  );
+}

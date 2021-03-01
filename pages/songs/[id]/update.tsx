@@ -1,44 +1,56 @@
-import { useState } from "react";
-import styles from "../styles/New.module.css";
+import { useEffect, useState } from "react";
+import styles from "../../../styles/New.module.css";
 import { useRouter } from "next/router";
-import { createSong } from "../utils/api";
+import { editSong, getSong } from "../../../utils/api";
 
-function generateId(artist, title) {
-  const id = (artist + `_` + title).toLowerCase().replaceAll(" ", "-");
-  return id;
-}
+export default function Update() {
+  const router = useRouter();
+  const { id: idQuery } = router.query;
+  if (!idQuery) {
+    return null;
+  }
+  const id = typeof idQuery !== "string" ? idQuery[0] : idQuery;
 
-export default function New() {
   const [artist, setArtist] = useState("");
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
   const [audio, setAudio] = useState("");
+  useEffect(() => {
+    getSong(id).then((newSong) => {
+      setArtist(newSong.artist);
+      setTitle(newSong.title);
+      setImage(newSong.image);
+      setAudio(newSong.audio);
+    });
+  }, [id]);
 
-  const router = useRouter();
+  if (!artist || !title || !image || !audio) {
+    return <div>Loading...</div>;
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
-
-    const newSong = {
-      id: generateId(artist, title),
+    const changedSong = {
+      id,
       artist,
       title,
       image,
       audio,
     };
-    createSong(newSong);
+
+    editSong(changedSong);
   }
+
   return (
     <div>
       <button onClick={router.back}>Back</button>
-      <h1>Add a Song</h1>
+      <h1>Edit a Song</h1>
       <form className={styles.newform} onSubmit={handleSubmit}>
         <label>
           Artist:
           <input
             value={artist}
             onChange={(event) => setArtist(event.target.value)}
-            placeholder="Artist"
             required
           />
         </label>
@@ -47,7 +59,6 @@ export default function New() {
           <input
             value={title}
             onChange={(event) => setTitle(event.target.value)}
-            placeholder="Title"
             required
           />
         </label>
@@ -56,7 +67,6 @@ export default function New() {
           <input
             value={image}
             onChange={(event) => setImage(event.target.value)}
-            placeholder="Image"
             required
           />
         </label>
@@ -65,7 +75,6 @@ export default function New() {
           <input
             value={audio}
             onChange={(event) => setAudio(event.target.value)}
-            placeholder="Song"
             required
           />
         </label>
