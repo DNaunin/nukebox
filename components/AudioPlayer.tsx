@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "../styles/Audioplayer.module.css";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { deleteSong } from "../utils/api";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 type Props = {
   id: string;
@@ -55,20 +56,14 @@ export default function AudioPlayer({ src, id }: Props) {
     <figure className={styles.audiofigure}>
       <figcaption className={styles.playercaption}>
         <button className={styles.btn} onClick={handleDeleteClick}>
-          <img
-            src="/trash.svg"
-            className={styles.download}
-            alt="fake download button"
-          />
+          🚮
         </button>
         <button className={styles.favbutton} onClick={handleFavoriteClick}>
           {favorite ? <img src="/Heart.svg" /> : "🖤"}
         </button>
-        <img
-          src="/Volume.svg"
-          className={styles.volume}
-          alt="fake volume button"
-        />
+        <Link href={`/songs/${id}/update`}>
+          <a>✍🏻</a>
+        </Link>
       </figcaption>
       <div className={styles.audioPlayer}>
         <input

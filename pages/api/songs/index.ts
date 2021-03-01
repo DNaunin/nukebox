@@ -30,6 +30,6 @@ async function handlePOST(req: NextApiRequest, res: NextApiResponse) {
     });
   }
   db.songs = [...db.songs, newSong];
-  await writeDB;
+  await writeDB(db);
   res.status(201).json(newSong);
 }

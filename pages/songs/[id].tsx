@@ -2,22 +2,23 @@ import styles from "../../styles/Player.module.css";
 import SongDetails from "../../components/SongDetails";
 import AudioPlayer from "../../components/AudioPlayer";
 import Navigation from "../../components/Navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { APISong, getSong } from "../../utils/api";
 import { useRouter } from "next/router";
 
 export default function Song() {
   const router = useRouter();
-  const { id } = router.query;
+  const { id: idQuery } = router.query;
+  if (!idQuery) {
+    return null;
+  }
+  const id = typeof idQuery !== "string" ? idQuery[0] : idQuery;
 
   const [song, setSong] = useState<APISong>(null);
 
-  if (typeof id !== "string") {
-    return;
-  }
-  getSong(id).then((newSong) => {
-    setSong(newSong);
-  });
+  useEffect(() => {
+    getSong(id).then((newSong) => setSong(newSong));
+  }, [id]);
 
   if (!song) {
     return <div>Loading...</div>;
