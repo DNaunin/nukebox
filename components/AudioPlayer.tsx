@@ -59,7 +59,7 @@ export default function AudioPlayer({ src, id }: Props) {
           🚮
         </button>
         <button className={styles.favbutton} onClick={handleFavoriteClick}>
-          {favorite ? <img src="/Heart.svg" /> : "🖤"}
+          {favorite ? "❤️" : "🖤"}
         </button>
         <Link href={`/songs/${id}/update`}>
           <a>✍🏻</a>

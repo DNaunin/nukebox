@@ -30,7 +30,7 @@ export async function createSong(newSong: APISong) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(newSong),
   };
-  return fetch(`http://localhost:3000/api/songs`, requestOptions);
+  return fetch(`/api/songs`, requestOptions);
 }
 
 export async function editSong(changedSong: APISong) {
@@ -39,8 +39,5 @@ export async function editSong(changedSong: APISong) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(changedSong),
   };
-  return fetch(
-    `http://localhost:3000/api/songs/${changedSong.id}`,
-    requestOptions
-  );
+  return fetch(`/api/songs/${changedSong.id}`, requestOptions);
 }

@@ -27,6 +27,7 @@ export default function New() {
       audio,
     };
     createSong(newSong);
+    alert("Your song has been added");
   }
   return (
     <div>
@@ -69,7 +70,7 @@ export default function New() {
             required
           />
         </label>
-        <input type="submit" placeholder="Add New Song" />
+        <input className={styles.btn_send} type="submit" value="Add Song" />
       </form>
     </div>
   );

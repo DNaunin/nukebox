@@ -4,3 +4,10 @@
   margin-right: 5em;
   grid-gap: 1em;
 }
+
+.btn_send {
+  max-width: 30em;
+  justify-self: center;
+  color: white;
+  background-color: rgb(92, 82, 82);
+}

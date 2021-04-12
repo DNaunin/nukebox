@@ -35,5 +35,6 @@
 
 .delete {
   height: 2em;
-  background-color: var(--background-color);
+  background-color: #3d99be;
+  border: none;
 }
