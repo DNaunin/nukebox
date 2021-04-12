@@ -39,6 +39,7 @@ export default function Update() {
     };
 
     editSong(changedSong);
+    alert("Your song has been edited");
   }
 
   return (
@@ -78,7 +79,7 @@ export default function Update() {
             required
           />
         </label>
-        <input type="submit" placeholder="Add New Song" />
+        <input className={styles.btn_send} type="submit" value="Edit Song" />
       </form>
     </div>
   );
